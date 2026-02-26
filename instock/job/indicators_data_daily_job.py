@@ -23,8 +23,13 @@ __date__ = '2023/3/10 '
 
 def prepare(date):
     try:
-        stocks_data = stock_hist_data(date=date).get_data()
+        stocks_data = None
+        for _ in range(3):
+            stocks_data = stock_hist_data(date=date).get_data()
+            if stocks_data is not None:
+                break
         if stocks_data is None:
+            logging.error(f"indicators_data_daily_job.prepare数据抓取为空：{date}")
             return
         results = run_check(stocks_data, date=date)
         if results is None:
@@ -58,7 +63,7 @@ def prepare(date):
         logging.error(f"indicators_data_daily_job.prepare处理异常：{e}")
 
 
-def run_check(stocks, date=None, workers=40):
+def run_check(stocks, date=None, workers=16):
     data = {}
     columns = list(tbs.STOCK_STATS_DATA['columns'])
     columns.insert(0, 'code')

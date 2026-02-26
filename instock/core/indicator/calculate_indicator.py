@@ -59,7 +59,8 @@ def get_indicators(data, end_date=None, threshold=120, calc_threshold=None):
             data['trix_20_sma'].values[np.isnan(data['trix_20_sma'].values)] = 0.0
 
             # cr
-            data.loc[:, 'm_price'] = data['amount'].values / data['volume'].values
+            data.loc[:, 'm_price'] = np.where(data['volume'].values == 0, np.nan, data['amount'].values / data['volume'].values)
+            data['m_price'].values[np.isnan(data['m_price'].values)] = 0.0
             data.loc[:, 'm_price_sf1'] = data['m_price'].shift(1, fill_value=0.0).values
             data.loc[:, 'h_m'] = data['high'].values - data[['m_price_sf1', 'high']].values.min(axis=1)
             data.loc[:, 'm_l'] = data['m_price_sf1'].values - data[['m_price_sf1', 'low']].values.min(axis=1)
@@ -425,19 +426,15 @@ def get_indicator(code_name, data, stock_column, date=None, calc_threshold=90):
         # 设置返回数组。
         stock_data_list = [end_date, code]
         columns_num = len(stock_column) - 2
-        # 增加空判断，如果是空返回 0 数据。
+        # 数据不足时直接跳过，避免生成大量“0值伪信号”。
         if len(data.index) <= 1:
-            for i in range(columns_num):
-                stock_data_list.append(0)
-            return pd.Series(stock_data_list, index=stock_column)
+            return None
 
         idr_data = get_indicators(data, end_date=end_date, threshold=1, calc_threshold=calc_threshold)
 
-        # 增加空判断，如果是空返回 0 数据。
+        # 计算失败直接跳过，避免将失败样本写成 0 值。
         if idr_data is None:
-            for i in range(columns_num):
-                stock_data_list.append(0)
-            return pd.Series(stock_data_list, index=stock_column)
+            return None
 
         # 初始化统计类
         for i in range(columns_num):

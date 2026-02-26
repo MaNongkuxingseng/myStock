@@ -22,8 +22,13 @@ __date__ = '2023/3/10 '
 
 def prepare(date, strategy):
     try:
-        stocks_data = stock_hist_data(date=date).get_data()
+        stocks_data = None
+        for _ in range(3):
+            stocks_data = stock_hist_data(date=date).get_data()
+            if stocks_data is not None:
+                break
         if stocks_data is None:
+            logging.error(f"strategy_data_daily_job.prepare数据抓取为空：{date}")
             return
         table_name = strategy['name']
         strategy_func = strategy['func']
@@ -54,7 +59,7 @@ def prepare(date, strategy):
         logging.error(f"strategy_data_daily_job.prepare处理异常：{strategy}策略{e}")
 
 
-def run_check(strategy_fun, table_name, stocks, date, workers=40):
+def run_check(strategy_fun, table_name, stocks, date, workers=16):
     is_check_high_tight = False
     if strategy_fun.__name__ == 'check_high_tight':
         stock_tops = fetch_stock_top_entity_data(date)
