@@ -1,0 +1,31 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-02-27 11:23",
+  "primary_source": "sina",
+  "fallback_sources": [
+    "tencent",
+    "eastmoney"
+  ],
+  "sources": {
+    "sina": {
+      "name": "新浪财经",
+      "url_template": "http://hq.sinajs.cn/list=",
+      "format": "csv",
+      "status": "可用"
+    },
+    "tencent": {
+      "name": "腾讯财经",
+      "url_template": "http://qt.gtimg.cn/q=",
+      "format": "csv",
+      "status": "可用"
+    },
+    "eastmoney": {
+      "name": "东方财富",
+      "url_template": "http://push2.eastmoney.com/api/qt/stock/get",
+      "format": "json",
+      "status": "可用但需API"
+    }
+  },
+  "update_interval_seconds": 60,
+  "cache_duration_minutes": 5
+}

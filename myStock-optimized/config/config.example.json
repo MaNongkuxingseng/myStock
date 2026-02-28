@@ -1,0 +1,26 @@
+{
+  "database": {
+    "host": "localhost",
+    "port": 3306,
+    "user": "root",
+    "password": "your_password",
+    "database": "instockdb",
+    "charset": "utf8mb4"
+  },
+  "api": {
+    "host": "0.0.0.0",
+    "port": 9991,
+    "debug": false,
+    "cors_origins": ["http://localhost:3000"]
+  },
+  "indicators": {
+    "macd": {"fast": 12, "slow": 26, "signal": 9},
+    "rsi": {"period": 14},
+    "bollinger": {"period": 20, "std_dev": 2},
+    "atr": {"period": 14}
+  },
+  "analysis": {
+    "signal_threshold": 2,
+    "risk_levels": {"high": 3, "medium": 2, "low": 1}
+  }
+}

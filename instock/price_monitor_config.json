@@ -1,0 +1,82 @@
+{
+  "version": "1.1",
+  "last_updated": "2026-02-27 13:16",
+  "monitored_stocks": [
+    {
+      "code": "603949",
+      "name": "雪龙集团",
+      "current_price": 19.34,
+      "monitor_rules": {
+        "buy_alert": 19.0,
+        "sell_alert": 20.6,
+        "stop_loss": 18.5,
+        "support": 18.8,
+        "resistance": 20.0,
+        "change_threshold": 3.0
+      }
+    },
+    {
+      "code": "600343",
+      "name": "航天动力",
+      "current_price": 37.08,
+      "monitor_rules": {
+        "buy_alert": 35.5,
+        "sell_alert": 38.4,
+        "stop_loss": 35.0,
+        "support": 35.8,
+        "resistance": 37.5,
+        "change_threshold": 3.0
+      }
+    },
+    {
+      "code": "002312",
+      "name": "川发龙蟒",
+      "current_price": 13.59,
+      "monitor_rules": {
+        "buy_alert": 13.4,
+        "sell_alert": 14.42,
+        "stop_loss": 13.2,
+        "support": 13.5,
+        "resistance": 14.0,
+        "change_threshold": 3.0
+      }
+    },
+    {
+      "code": "600537",
+      "name": "亿晶光电",
+      "current_price": 4.02,
+      "monitor_rules": {
+        "buy_alert": 4.0,
+        "sell_alert": 4.4,
+        "stop_loss": 3.7,
+        "support": 3.9,
+        "resistance": 4.2,
+        "change_threshold": 5.0
+      }
+    }
+  ],
+  "market_monitor": {
+    "shanghai_index": 3250.45,
+    "alert_threshold": 1.0,
+    "volume_alert": true
+  },
+  "notification_settings": {
+    "feishu_group": "oc_b99df765824c2e59b3fabf287e8d14a2",
+    "alert_levels": {
+      "critical": [
+        "stop_loss",
+        "large_drop"
+      ],
+      "warning": [
+        "resistance",
+        "support",
+        "target_reached"
+      ],
+      "info": [
+        "small_change",
+        "volume_change"
+      ]
+    },
+    "check_interval_minutes": 5
+  }
+}

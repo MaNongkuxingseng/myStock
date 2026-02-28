@@ -1,0 +1,29 @@
+GIT COMMIT GUIDE for myStock Updates
+
+Files to commit:
+- instock/monitor/stock_monitor.py  (new monitoring system)
+- run_task.bat                       (Windows task scheduler)
+
+Commit message:
+feat: Add stock monitoring system
+
+- Add real-time stock movement monitoring
+- Support price and volume anomaly detection  
+- Prepare Feishu message integration
+- Create Windows task scheduling
+- Fix directory structure issues
+
+Monitoring rules:
+1. Price alert: change rate > 7%
+2. Volume alert: volume ratio > 3 or < 0.3
+3. Message target: Current Feishu group
+
+Suggested schedule:
+- 16:20: After market close analysis
+- 20:30: Evening report
+- 08:40: Pre-market alert
+
+To commit:
+git add .
+git commit -m "feat: Add stock monitoring system"
+git push origin main
