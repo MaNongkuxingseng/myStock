@@ -1,0 +1,43 @@
+{
+  "version": "1.0",
+  "test_time": "2026-03-01T12:36:06.320090",
+  "base_url": "http://localhost:9988",
+  "results": [
+    {
+      "test": "Service Port",
+      "success": true,
+      "details": "Port 9988 listening"
+    },
+    {
+      "test": "Home Page",
+      "success": true,
+      "details": "Status 200"
+    },
+    {
+      "test": "API Endpoints",
+      "success": false,
+      "details": "0/3 passed"
+    },
+    {
+      "test": "Directory Structure",
+      "success": true,
+      "details": "6/6 exist"
+    },
+    {
+      "test": "Key Files",
+      "success": true,
+      "details": "4/4 exist"
+    },
+    {
+      "test": "Database Module",
+      "success": true,
+      "details": "Import successful"
+    }
+  ],
+  "summary": {
+    "total_tests": 6,
+    "passed_tests": 5,
+    "failed_tests": 1,
+    "success_rate": 0.8333333333333334
+  }
+}
