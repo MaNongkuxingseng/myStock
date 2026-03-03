@@ -1,0 +1,104 @@
+{
+  "timestamp": "20260303_163348",
+  "holdings": [
+    {
+      "code": "002714",
+      "name": "牧原股份",
+      "current_price": 46.53,
+      "shares": 400,
+      "cost_price": 46.914,
+      "buy_avg_price": 46.914,
+      "current_value": 18612.0,
+      "cost_value": 18765.600000000002,
+      "profit_loss": -153.60000000000218,
+      "profit_pct": -0.8185189921985023
+    },
+    {
+      "code": "000301",
+      "name": "东方盛虹",
+      "current_price": 14.58,
+      "shares": 1000,
+      "cost_price": 14.475,
+      "buy_avg_price": 14.475,
+      "current_value": 14580.0,
+      "cost_value": 14475.0,
+      "profit_loss": 105.0,
+      "profit_pct": 0.7253886010362695
+    },
+    {
+      "code": "002216",
+      "name": "三全食品",
+      "current_price": 12.87,
+      "shares": 1000,
+      "cost_price": 13.005,
+      "buy_avg_price": 13.005,
+      "current_value": 12870.0,
+      "cost_value": 13005.0,
+      "profit_loss": -135.0,
+      "profit_pct": -1.0380622837370241
+    },
+    {
+      "code": "002065",
+      "name": "东华软件",
+      "current_price": 8.85,
+      "shares": 300,
+      "cost_price": 8.977,
+      "buy_avg_price": 8.977,
+      "current_value": 2655.0,
+      "cost_value": 2693.1,
+      "profit_loss": -38.09999999999991,
+      "profit_pct": -1.4147265233374147
+    }
+  ],
+  "realtime_data": {
+    "002714": {
+      "price": 46.53,
+      "pre_close": 46.81,
+      "open": 46.7,
+      "high": 47.5,
+      "low": 46.46,
+      "volume": 449678,
+      "amount": 210967.0,
+      "time": "20260303161403",
+      "name": "牧原股份"
+    },
+    "000301": {
+      "price": 14.58,
+      "pre_close": 13.25,
+      "open": 13.27,
+      "high": 14.58,
+      "low": 13.16,
+      "volume": 873319,
+      "amount": 122381.0,
+      "time": "20260303161451",
+      "name": "东方盛虹"
+    },
+    "002216": {
+      "price": 12.87,
+      "pre_close": 12.62,
+      "open": 12.6,
+      "high": 13.2,
+      "low": 12.44,
+      "volume": 416232,
+      "amount": 53706.0,
+      "time": "20260303161421",
+      "name": "三全食品"
+    },
+    "002065": {
+      "price": 8.85,
+      "pre_close": 9.22,
+      "open": 9.24,
+      "high": 9.29,
+      "low": 8.84,
+      "volume": 750214,
+      "amount": 67607.0,
+      "time": "20260303161403",
+      "name": "东华软件"
+    }
+  },
+  "summary": {
+    "total_value": 48717.0,
+    "total_profit": -221.7000000000021,
+    "total_profit_pct": -0.4530157114921362
+  }
+}
