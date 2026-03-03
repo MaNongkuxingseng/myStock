@@ -1,0 +1,81 @@
+{
+  "timestamp": "20260303_173118",
+  "total_strong_signals": 41,
+  "top_5_signals": [
+    {
+      "code": "002216",
+      "name": "三全食品",
+      "score": 100,
+      "price": 12.94,
+      "change": 1.41,
+      "signals": [
+        "MACD金叉",
+        "KDJ金叉",
+        "突破10日线",
+        "突破20日线"
+      ],
+      "recommendation": "强烈买入，多重技术指标共振"
+    },
+    {
+      "code": "002714",
+      "name": "牧原股份",
+      "score": 100,
+      "price": 47.56,
+      "change": 1.41,
+      "signals": [
+        "MACD金叉",
+        "KDJ金叉",
+        "突破10日线",
+        "突破20日线",
+        "放量上涨"
+      ],
+      "recommendation": "强烈买入，多重技术指标共振"
+    },
+    {
+      "code": "300740",
+      "name": "水羊股份",
+      "score": 100,
+      "price": 24.17,
+      "change": -0.82,
+      "signals": [
+        "MACD金叉",
+        "KDJ金叉",
+        "突破5日线",
+        "突破10日线",
+        "突破20日线"
+      ],
+      "recommendation": "强烈买入，多重技术指标共振"
+    },
+    {
+      "code": "002356",
+      "name": "赫美集团",
+      "score": 100,
+      "price": 4.6,
+      "change": 9.0,
+      "signals": [
+        "MACD金叉",
+        "突破5日线",
+        "突破10日线",
+        "突破20日线"
+      ],
+      "recommendation": "强烈买入，多重技术指标共振"
+    },
+    {
+      "code": "300761",
+      "name": "立华股份",
+      "score": 95,
+      "price": 20.79,
+      "change": 0.68,
+      "signals": [
+        "MACD金叉",
+        "KDJ金叉",
+        "突破5日线",
+        "突破10日线",
+        "突破20日线"
+      ],
+      "recommendation": "积极买入，技术面优秀"
+    }
+  ],
+  "analysis_date": "2026-03-03",
+  "data_source": "全量数据库分析"
+}
