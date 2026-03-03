@@ -47,16 +47,7 @@ def run_with_args(run_fun, *args):
     else:
         # 当前时间作业 python xxx.py
         try:
-            # 修复：在交易时间内也尝试获取当日数据
-            now_time = datetime.datetime.now()
-            if trd.is_trade_date(now_time.date()) and trd.is_tradetime(now_time):
-                # 交易时间内，尝试获取当日数据
-                run_date = now_time.date()
-                run_date_nph = run_date
-                print(f"修复：交易时间内，使用当日日期 {run_date}")
-            else:
-                # 非交易时间，使用原逻辑
-                run_date, run_date_nph = trd.get_trade_date_last()
+            run_date, run_date_nph = trd.get_trade_date_last()
             if run_fun.__name__.startswith('save_nph'):
                 run_fun(run_date_nph, False)
             elif run_fun.__name__.startswith('save_after_close'):

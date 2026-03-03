@@ -8,6 +8,7 @@ import concurrent.futures
 import logging
 import os.path
 import sys
+import realtime_data_daily_job as rdj
 
 # 在项目运行时，临时将项目路径添加到环境变量
 cpath_current = os.path.dirname(os.path.dirname(__file__))
@@ -18,6 +19,13 @@ if not os.path.exists(log_path):
     os.makedirs(log_path)
 logging.basicConfig(format='%(asctime)s %(message)s', filename=os.path.join(log_path, 'stock_execute_job.log'))
 logging.getLogger().setLevel(logging.INFO)
+import time
+import datetime
+import concurrent.futures
+import logging
+import os.path
+import sys
+import realtime_data_daily_job as rdj
 import init_job as bj
 import basic_data_daily_job as hdj
 import basic_data_other_daily_job as hdtj
@@ -27,6 +35,7 @@ import strategy_data_daily_job as sdj
 import backtest_data_daily_job as bdj
 import klinepattern_data_daily_job as kdj
 import selection_data_daily_job as sddj
+import realtime_data_daily_job as rdj
 
 __author__ = 'myh '
 __date__ = '2023/3/10 '
@@ -49,6 +58,8 @@ def main():
         executor.submit(gdj.main)
         # 第4步创建股票k线形态表
         executor.submit(kdj.main)
+        # 第X步创建股票实时数据表
+        executor.submit(rdj.main)
         # 第5步创建股票策略数据表
         executor.submit(sdj.main)
 

@@ -1,0 +1,25 @@
+{
+  "test_date": "2026-03-03 07:41:31",
+  "total_tests": 3,
+  "successful_tests": 2,
+  "results": [
+    {
+      "name": "新浪财经实时数据",
+      "url": "http://hq.sinajs.cn/list=sh000001",
+      "success": false,
+      "timestamp": "2026-03-03T07:41:31.603413"
+    },
+    {
+      "name": "腾讯财经实时数据",
+      "url": "http://qt.gtimg.cn/q=sh000001",
+      "success": true,
+      "timestamp": "2026-03-03T07:41:31.673155"
+    },
+    {
+      "name": "东方财富实时数据",
+      "url": "http://push2.eastmoney.com/api/qt/stock/get?secid=1.000001",
+      "success": true,
+      "timestamp": "2026-03-03T07:41:31.770464"
+    }
+  ]
+}
